@@ -63,7 +63,7 @@ $(function() {
                         $kw.val(query.substr(0, i));
                         if (++i > query.length) {
                             clearInterval(typeInterval);
-                            $tips.html('3、点击下“百度一下”按钮');
+                            $tips.html('3、点击“百度一下”按钮');
                             
                             $arrow.removeClass('active').fadeIn().animate({
                                 left: $searchSubmit.offset().left + $searchSubmit.width()  / 2 + 'px',
@@ -74,7 +74,7 @@ $(function() {
                                 
                                 stepTimeout = setTimeout(function () {
                                     window.location = 'https://www.baidu.com/s?ie=utf-8&wd=' + encodeURIComponent(query);
-                                }, 1000);
+                                }, 2000);
                             });
                         }
                     }, 200);
